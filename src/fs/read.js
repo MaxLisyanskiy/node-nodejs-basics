@@ -12,6 +12,8 @@ const read = async () => {
   const filePath = path.join(__dirname, "files", "fileToRead.txt");
 
   try {
+    await fs.access(filePath);
+
     const text = await fs.readFile(filePath, "utf8");
     console.log(text);
   } catch (error) {
