@@ -13,7 +13,7 @@ const remove = async () => {
 
   try {
     await fs.unlink(filePath);
-  } catch (err) {
+  } catch (error) {
     throw new Error(ErrorMsg);
   }
 };

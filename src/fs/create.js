@@ -14,8 +14,8 @@ const create = async () => {
   try {
     await fs.access(filePath);
     throw new Error(ErrorMsg);
-  } catch (err) {
-    if (err.message === ErrorMsg) throw err;
+  } catch (error) {
+    if (error.message === ErrorMsg) throw error;
 
     await fs.writeFile(filePath, "I am fresh and young");
   }
